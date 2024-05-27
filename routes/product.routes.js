@@ -6,6 +6,9 @@ export const produtoRoute = (app) => {
 
     route.get('/', produtoServices.getAll);
     route.get('/:id', produtoServices.getById);
+    route.post('/', produtoServices.create);
+    route.put('/:id', produtoServices.update);
+    route.delete('/:id', produtoServices.delete);
 
     app.use('/api/produto', route)
 }

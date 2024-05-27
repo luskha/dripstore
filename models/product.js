@@ -10,30 +10,29 @@ export const Produto = sequelize.define('produtos', {
         type: DataTypes.STRING,
         allowNull: false
     },
-     desconto: {
+    desconto: {
         type: DataTypes.DECIMAL,
         allowNull: false
-     },
-     preco: {
+    },
+    preco: {
         type: DataTypes.DECIMAL,
         allowNull: false
-     },
-     ativo: {
+    },
+    ativo: {
         type: DataTypes.BOOLEAN,
         allowNull: false
-     },
-     categoria: {
-        type: DataTypes.DECIMAL,
+    },
+    categoria: {
+        type: DataTypes.STRING, 
         allowNull: false
-     },
-     data_cadastro: {
+    },
+    data_cadastro: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: new Date()
-     },
-     
+    }
 }, {
-   timestamps: true, // Add this line to enable the default timestamp columns
-   createdAt: 'data_cadastro', // Map 'createdAt' to 'data_cadastro'
-   updatedAt: false // Disable 'updatedAt' column if you don't need it
-})
+    timestamps: true,
+    createdAt: 'data_cadastro',
+    updatedAt: false
+});
