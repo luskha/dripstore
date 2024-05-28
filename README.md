@@ -8,6 +8,7 @@
 - Dotenv;
 - Sequelize;
 - PG;
+- bcrypt
 
 # Create tables:
 - Query for create tables:
