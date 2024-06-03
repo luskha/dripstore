@@ -2,7 +2,11 @@ import express from "express"
 import { Sequelize } from "sequelize"
 import { connection } from "./db/database.js"
 import { produtoRoute } from "./routes/product.routes.js"
+import winston from 'winston'
+import cors from 'cors'
 const app = express()
+
+app.use(cors())
 
 const HOST = 'localhost'
 const PORT = 5000
